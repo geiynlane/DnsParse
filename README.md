@@ -34,6 +34,7 @@
 
   用记事本打开 domains.txt：
   - 一行一个域名，例如：
+
         github.com
         api.github.com
   - 可以保留 [github]、[steam] 这样的分类标题。
