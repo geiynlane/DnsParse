@@ -1,6 +1,7 @@
 # DnsParse
 
   这是一个自动通过站长之家DNS解析工具检测本地区本网络对目标域名解析，并把解析记录保存至本机hosts和路由器etc/hosts，以加速github、steam、tinymediamanager、microsoft、gog、ubisoft、ea、origin等常见访问不稳定的国外地址。
+  
   你也可以根据自己的需求自定义要解析的域名。
 
 一、介绍
