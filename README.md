@@ -116,12 +116,8 @@ login.ea.com
 account.ea.com
 myaccount.ea.com
 eaaccounts.akamaized.net
-origin.com
-www.origin.com
-origin-a.akamaihd.net
-eaassets-a.akamaihd.net
 rtm.tnt-ea.com
-cloudsync-prod.s3.amazonaws.com
+eaassets-a.akamaihd.net
 gos.ea.com
 gosredirector.ea.com
 easo.ea.com
@@ -131,6 +127,12 @@ connect.ea.com
 gateway.ea.com
 friends.gs.ea.com
 service-aggregation-layer.juno.ea.com
+
+[origin]
+origin.com
+www.origin.com
+origin-a.akamaihd.net
+cloudsync-prod.s3.amazonaws.com
 unravel2.com
 unraveltwo.com
 
@@ -207,8 +209,11 @@ translate.googleapis.com
 2. 扫描其余内容：
 
    - 以 # 开头的注释、空行原样保留；
+
    - 脚本管理的域名从映射行中删除；
+
    - 非管理域名保留；一行有多个主机名时，只删除管理项；
+
    - 如果一行里的主机名全部被删除，就删除这条映射，行尾的
 
      #注释保留为独立注释行。
@@ -219,8 +224,8 @@ translate.googleapis.com
 
 5. 执行 ipconfig /flushdns 刷新 DNS 缓存。管理域名包括 domains.txt 中全部有效域名（包括本次解析失败和阻断的域名，用于清掉旧记录），以及本次实际写入的域名。
 
-
   路由器同步规则：
+
 - 先读取路由器当前的 /etc/hosts；
 - 删除旧的 DnsParse 管理块，再按域名过滤脚本管理的条目；
 - 路由器自己的 127.0.0.1 localhost、主机名、注释等非管理行保留；
@@ -238,9 +243,9 @@ translate.googleapis.com
 - 解析失败：站长之家没有返回有效 IPv4，或域名本身没有结果。 
   - 1.某些域名显示“阻断”？
   - 说明站长之家返回了 IP，但本机到这些 IP 的 443 端口不通。地址不会写入 hosts，避免把污染或失效地址固定下来。换网络、代理或镜像源通常比改 hosts 更有效。
-  -  2.某些域名显示“解析失败”？
+  - 2.某些域名显示“解析失败”？
   - 站长之家没有返回可用 IPv4，或域名已停用/写错。该域名不会写入   hosts，不影响其他域名。
   - 3.访问又不稳定了？
-  -  CDN 和投票结果会变化。换网络、重启路由器或过一段时间后重新双击运行一次即可。
+  - CDN 和投票结果会变化。换网络、重启路由器或过一段时间后重新双击运行一次即可。
   - 4.需要管理员权限吗？
-  -  解析、生成文件和同步路由器不需要管理员权限；更新系统 hosts 和刷新 DNS 缓存需要。双击“一键解析DNS.bat”会自动请求 UAC；点“否”时仍会生成 hosts 和报告，但不会修改系统 hosts，退出码 3。直接右键运行 DnsParse.ps1 不会自动提权。
+  - 解析、生成文件和同步路由器不需要管理员权限；更新系统 hosts 和刷新 DNS 缓存需要。双击“一键解析DNS.bat”会自动请求 UAC；点“否”时仍会生成 hosts 和报告，但不会修改系统 hosts，退出码 3。直接右键运行 DnsParse.ps1 不会自动提权。

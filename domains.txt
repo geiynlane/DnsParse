@@ -7,7 +7,7 @@
 #   3. 也可以直接粘贴 hosts 行（程序只取其中的域名）。
 #   4. 修改本文件后，双击“一键解析DNS”即可重新生成结果。
 #   5. 所有域名统一由站长之家 DNS 查询的多个节点投票决定 IP。
-============================================================
+# ============================================================
 
 [github]
 github.com
@@ -118,12 +118,8 @@ login.ea.com
 account.ea.com
 myaccount.ea.com
 eaaccounts.akamaized.net
-origin.com
-www.origin.com
-origin-a.akamaihd.net
-eaassets-a.akamaihd.net
 rtm.tnt-ea.com
-cloudsync-prod.s3.amazonaws.com
+eaassets-a.akamaihd.net
 gos.ea.com
 gosredirector.ea.com
 easo.ea.com
@@ -133,6 +129,12 @@ connect.ea.com
 gateway.ea.com
 friends.gs.ea.com
 service-aggregation-layer.juno.ea.com
+
+[origin]
+origin.com
+www.origin.com
+origin-a.akamaihd.net
+cloudsync-prod.s3.amazonaws.com
 unravel2.com
 unraveltwo.com
 
