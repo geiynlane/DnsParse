@@ -12,8 +12,8 @@
 
 二、使用方式
 
-  使用前安装 Node.js 22+，或确认 node.exe 在 PATH 中。也可以显式指定：DnsParse.ps1 -NodeExe "C:\Program Files\nodejs\node.exe"
-  1. 可以打开本文件夹，双击“一键解析DNS.bat”，也可以把文件夹内的“一键解析DNS.bat”发送到桌面快捷方式。
+  使用前安装 Node.js 22+，或确认 node.exe 在 PATH 中。也可以指定：DnsParse.ps1 -NodeExe "C:\（自定义路径）\node.exe"
+  1. 打开本文件夹，双击“一键解析DNS.bat”，也可以把文件夹内的“一键解析DNS.bat”发送到桌面快捷方式。
   2. 程序会自动：
      - 读取 domains.txt；
      - 调用 chinaz-vote.js 查询站长之家；
