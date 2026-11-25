@@ -2,10 +2,9 @@
 <#
     DNS 加速解析工具 V0.7
     ------------------------------------------------------------
-    只读取 domains.txt，不再请求 GitHub520、SteamHostSync、TMM 等
-    旧远程源。每个域名交给站长之家 DNS 查询页的 47 个监测节点投票，
+    只读取 domains.txt，。每个域名交给站长之家 DNS 查询页的 47 个监测节点投票，
     选择票数最高的 IPv4；通过 TCP 443 验证后生成 hosts，并：
-      1. 合并写入本机系统 hosts（保留 Tailscale、其他映射和注释）；
+      1. 合并写入本机系统 hosts（保留其他映射和注释）；
       2. 通过 SSH 合并写入路由器 /etc/hosts。
 
     运行依赖：Windows PowerShell 5.1 + Node.js 22+。
