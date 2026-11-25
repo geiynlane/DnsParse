@@ -1,6 +1,6 @@
 # DnsParse
 一、这是什么
-  这是一个通过站长之家DNS解析工具自动。通过站长之家DNS解析工具检测本地区本网络对目标域名解析，并把解析记录保存至本机hosts，以加速github、steam、tinymediamanager、microsoft、gog、ubisoft、ea、origin等常见访问不稳定的国外地址。
+  这是一个自动通过站长之家DNS解析工具检测本地区本网络对目标域名解析，并把解析记录保存至本机hosts，以加速github、steam、tinymediamanager、microsoft、gog、ubisoft、ea、origin等常见访问不稳定的国外地址。
 
 二、生成结果后，程序会：
   - 在本文件夹生成 hosts 和“解析报告.txt”；
