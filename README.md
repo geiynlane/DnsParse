@@ -1,8 +1,9 @@
 # DnsParse
 
-  这是一个自动通过站长之家DNS解析工具检测本地区本网络对目标域名解析，并把解析记录保存至本机hosts，以加速github、steam、tinymediamanager、microsoft、gog、ubisoft、ea、origin等常见访问不稳定的国外地址。
+  这是一个自动通过站长之家DNS解析工具检测本地区本网络对目标域名解析，并把解析记录保存至本机hosts和路由器etc/hosts，以加速github、steam、tinymediamanager、microsoft、gog、ubisoft、ea、origin等常见访问不稳定的国外地址。
 
 一、介绍
+
 运行后，程序会：
   - 在本文件夹生成 hosts 和“解析报告.txt”；
   - 写入本机系统 C:\Windows\System32\drivers\etc\hosts，只改动脚本管理的域名，本机原来hosts里的内容不做任何修改并保留至文段最后；
@@ -10,6 +11,7 @@
     我使用的是openwrt作为软路由，其他路由器请自行开启ssh。
 
 二、使用方式
+
   使用前安装 Node.js 22+，或确认 node.exe 在 PATH 中。也可以显式指定：DnsParse.ps1 -NodeExe "C:\Program Files\nodejs\node.exe"
   1. 可以打开本文件夹，双击“一键解析DNS.bat”，也可以把文件夹内的“一键解析DNS.bat”发送到桌面快捷方式。
   2. 程序会自动：
@@ -29,6 +31,7 @@
      -看到“配置成功”后，后续运行会自动同步。
 
 三、修改要解析的域名
+
   用记事本打开 domains.txt：
   - 一行一个域名，例如：
         github.com
@@ -41,6 +44,7 @@
   改完保存，再双击“一键解析DNS”即可。
 
 四、本机系统 hosts 合并规则
+
   本机默认目标：
       C:\Windows\System32\drivers\etc\hosts
   每次运行按以下顺序处理：
@@ -70,6 +74,7 @@
   - 写入后重新读取路由器 hosts，校验管理块条数；不一致视为失败。
 
 五、状态说明与常见问题
+
 状态：
   - 可达：最高票或候选地址通过 TCP 443，已写入 hosts；
   - 阻断：有票数，但最高票及候选地址在超时内都无法完成 TCP 443；
