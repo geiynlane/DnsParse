@@ -138,6 +138,9 @@ unraveltwo.com
 
 [chrome]
 translate.googleapis.com
+
+[huggingface]
+huggingface.co
 ```
 
 **一、介绍**
